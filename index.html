@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeezWeb - Listen music</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="img/id.svg"></a>
+            </div>
+            <div class="nav-modules">
+                <ul>
+                    <li><a class="nav-links" href="index.html"><ion-icon name="home"></ion-icon></a></li>
+                    <li><a class="nav-links" href="playlist.html"><ion-icon name="heart"></ion-icon></a></li>
+                    <li><a class="nav-links" href="search.html"><ion-icon name="search"></ion-icon></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+  
+  <section class="container">
+      <div class="centered-container">
+          <h1>Choisissez ce que vous écoutez. Listez vos favoris.</h1>
+          <p>Avec des millions de <strong>titres</strong>, des <strong>podcasts</strong>, des <strong>radios et plus encore</strong>, chacun peut trouver son bonheur.</p>
+          <a href="search.html" class="button-primary">Commencez à écouter</a>
+      </div>
+      <div class="fullwidth-container">
+          <img src="img/artists-on-app.png">
+      </div>
+  </section>
+
+  <section class="container">
+    <div class="centered-container">
+        <h1>Vos chansons préférées à portée de main.</h1>
+        <p>Retrouvez des voix familières dans vos favoris et découvrez-en de nouvelles via la recherche.</p>
+
+
+        <audio class="fullwidth-audio-player" controls>
+            {# <source src="horse.mp3" type="audio/mpeg"> #}
+          Your browser does not support the audio element.
+          </audio>
+
+
+    </div>
+</section>
+
+</body>
+</html>

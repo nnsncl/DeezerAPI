@@ -1,0 +1,248 @@
+/*
+
+Summary
+
+1 - General
+2 - Navigation
+3 - Layout
+*/
+
+
+/* 1 - General */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Questrial&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif,
+    -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0 2rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Questrial', sans-serif;
+    line-height: 1.2;
+    transition: .2s ease-in-out;
+}
+
+h1{
+    font-size: 4.6rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+h4, h5, h6{
+    font-size: 1.8rem;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: grey;
+}
+strong{
+    color: #212121;
+}
+
+.fullwidth-audio-player{
+    width: 100%;
+    margin: 30px 0;
+}
+
+button {
+    background-color: #fafafa;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+}
+
+.button-primary {
+    display: inline-block;
+    background-color: #F28A70;
+    color: #fafafa;
+    cursor: pointer;
+    padding: 15px 20px;
+    margin: 30px 0;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    -webkit-box-shadow: 0px 10px 10px -5px rgba(242,138,112,.6);
+    -moz-box-shadow: 0px 10px 10px -5px rgba(242,138,112,.6);
+    box-shadow: 0px 10px 10px -5px rgba(242,138,112,.6);
+    transition: .2s ease-in-out;
+}
+.button-primary:hover{
+    box-shadow: none;
+}
+
+/* Form */
+.search-form {
+    display: flex;
+    align-items: flex-end;
+    margin: 25px 0;
+}
+.form-group{
+    width:50%;
+    margin-right: 10px;
+}
+.form-group input, .form-group select{
+    width:100%;
+}
+
+label{
+    font-size:1rem;
+    line-height: 3;
+}
+
+input, select {
+    background-color: transparent;
+    color: #212121;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    padding: 0 10px;
+    width: auto;
+    height:50px;
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+select option {
+    padding: 30px;
+  }
+  
+/* 2 - Navigation */
+
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.nav-modules{
+    width: 50%;
+    text-align: right;
+}
+
+.nav-modules ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.nav-links{
+    text-decoration: none;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    color:#4a4a4a;
+    transition: .2s ease;
+}
+
+.nav-links:hover{
+    color: #212121;
+}
+
+#favorites:hover{
+    color: #F28A70;
+}
+
+/* 3 - Layout */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 10px;
+}
+.centered-container{
+    grid-column: 2 / span 4;
+    text-align: center;
+    margin: 100px 0;
+}
+.left-container{
+    grid-column: 1 / span 3;
+    margin: 100px 0;
+}
+
+.fullwidth-container {
+    grid-column: 1 / span 6;
+}
+.fullwidth-container img{
+   width: 100%;
+}
+
+/* Cards */
+.cards-stack{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card {
+    display:flex;
+    overflow: hidden;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.cover{
+    border-radius: 8px;
+    width:100px;
+
+}
+
+.track, .desc{
+    width:100%;
+}
+
+.song-title{
+    font-weight:bold;
+}
+
+.audio-player{
+    width:100%;
+    margin: 10px auto;
+}
+
+@media (max-width: 768px){
+    .centered-container{
+        grid-column: 1 / span 6;
+        text-align: center;
+        margin: 100px 0;
+    }
+    .centered-container h1{
+        font-size: 3.2rem;
+    }
+    .left-container{
+        grid-column: 1 / span 6;
+    }
+    .card {
+        width: 100%;
+    }
+ 
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeezWeb - Listen music</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script defer src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script defer src="js/likes.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="img/id.svg"></a>
+            </div>
+            <div class="nav-modules">
+                <ul>
+                    <li><a class="nav-links" href="index.html"><ion-icon name="home"></ion-icon></a></li>
+                    <li><a class="nav-links" href="playlist.html"><ion-icon name="heart"></ion-icon></a></li>
+                    <li><a class="nav-links" href="search.html"><ion-icon name="search"></ion-icon></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="left-container">
+            <h2>Recherchez votre titres favoris.</h2>
+            <p>Utilisez le formulaire pour trouver vos chansons préférées sur Deezer.</p>
+
+            <form class="search-form" id="search-form" method="get" action="">
+                <div class="form-group">
+                    <label for="user-input">Titre :</label>
+                    <input type="text" id="user-input" class="form-control" placeholder="Tapez votre recherche">
+                </div>
+                <div class="form-group">
+                    <label for="filter-input">Trier par :</label>
+                    <select id="filter-input" class="form-control">
+                        <option value="song" selected>Titre</option>
+                        <option value="artist">Artiste</option>
+                        <option value="album">Album</option>
+                        <option value="rank">Les mieux notés</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit"><ion-icon name="search"></ion-icon></button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="cards-stack" id="cards-stack"></section>
+
+</body>
+</html>

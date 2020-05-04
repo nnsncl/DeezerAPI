@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="147px" height="38px" viewBox="0 0 147 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-714.000000, -439.000000)">
+            <g id="Group-2" transform="translate(714.000000, 439.000000)">
+                <text id="Deezweb" font-family="ProximaNova-Bold, Proxima Nova" font-size="32" font-weight="bold" letter-spacing="-1.45454545" fill="#212121">
+                    <tspan x="21" y="31">Deezweb</tspan>
+                </text>
+                <g id="Group" transform="translate(0.000000, 16.000000)">
+                    <rect id="Rectangle" fill="#F28A70" x="6" y="0" width="5" height="15" rx="2.5"></rect>
+                    <rect id="Rectangle-Copy" fill="#253C78" x="0" y="7" width="5" height="8" rx="2.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
