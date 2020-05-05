@@ -2,8 +2,8 @@ $(document).ready(() => {
     $( "#search-form" ).submit((e) => {
         e.preventDefault()
 
-        const userInpit = $('#user-input').val()
-        const filters = $('#filter-input').find('option:selected')
+        let userInpit = $('#user-input').val()
+        let filters = $('#filter-input').find('option:selected')
         let filteredOption = filters.val()
 
         switch (filteredOption) {
@@ -30,6 +30,8 @@ $(document).ready(() => {
 
             if(userInpit.length != 0) {
 
+                $("#cards-stack").empty()
+
                 for (let i = 1; i < tracks.data.length; i++) {
                     let trackCover = tracks.data[i].album.cover
                         trackTitle = tracks.data[i].title
@@ -49,12 +51,13 @@ $(document).ready(() => {
                         + "<p>" + trackAlbum + "</p></div>")
                         
                         $("#card"+[i]).append("<audio controls id=audio-player" + [i] + " class=audio-player src=" + trackPlayer + "></audio></div>")
-
                 }
+                
             }
             else {
                 $("#cards-stack").html("Aucun résultat")
             }
+        
         })
     })
 })
