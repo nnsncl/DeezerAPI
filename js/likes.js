@@ -1,11 +1,10 @@
-$(document).ready(function(){
+$(document).ready( () => {
 
     $( "#search-form" ).submit((e) => {
         e.preventDefault()
 
         const userInput = $('#user-input').val().toLowerCase()
-
-        let filters = $('#filter-input').find('option:selected')
+        const filters = $('#filter-input').find('option:selected')
         let filteredOption = filters.val()
 
         // Define how to filter datas
@@ -34,6 +33,7 @@ $(document).ready(function(){
             dataType : 'jsonp'
         }).done(function(tracks) {
 
+            
             // Check if userInput is filled and if it returns datas
             if(userInput.length != 0 && tracks.data.length != 0) {
 
@@ -74,8 +74,7 @@ $(document).ready(function(){
                         $("#card"+[i]).append("<audio controls id=audio-player" + [i]
                         + " class=audio-player src="
                         + trackPlayer + "></audio></div>")
-
-
+                        
                         // User Interaction + localStorage
                         $("#card" + [i]).find("#like" + [i]).click( function(e) {
                             e.preventDefault()
@@ -108,7 +107,7 @@ $(document).ready(function(){
 
             // Render this if the field is empty or if no datas match
             else {
-                $("#cards-stack").html("Aucun resultat")
+                $(".cards-stack").html("<h6>Aucun resultat correspondant à votre recherche</h6>")
             }
         
         })
