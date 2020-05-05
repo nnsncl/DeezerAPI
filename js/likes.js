@@ -1,4 +1,5 @@
-$(document).ready(() => {
+$(document).ready(function(){
+
     $( "#search-form" ).submit((e) => {
         e.preventDefault()
 
@@ -31,7 +32,7 @@ $(document).ready(() => {
         $.ajax({
             url : "https://api.deezer.com/search?q=" + userInput + "&order=" + filteredOption +"&output=jsonp",
             dataType : 'jsonp'
-        }).done((tracks) => {
+        }).done(function(tracks) {
 
             // Check if userInput is filled and if it returns datas
             if(userInput.length != 0 && tracks.data.length != 0) {
@@ -49,21 +50,21 @@ $(document).ready(() => {
                         trackPlayer = tracks.data[i].preview
 
                     // Set Object for localStorage
-                    let playlist = [{
+                    let likedTrack = {
                         trackID : tracks.data[i].id,
                         trackCover : tracks.data[i].album.cover,
                         trackTitle : tracks.data[i].title,
                         trackArtist : tracks.data[i].artist.name,
                         trackAlbum : tracks.data[i].album.title,
                         trackPlayer : tracks.data[i].preview
-                    }]
+                    }
                     
                         // Cards builder
                         $("#cards-stack").append("<div id=card" + [i] + " class=card></div>");
                         $("#card" + [i]).append("<div id=card-header" + [i] + " class=card-header>"
                         + "<img src=" + trackCover + " class=cover>"
                         + "<a id=like" + [i]
-                        + " class= ><ion-icon name=heart></ion-icon></a></div>")
+                        + " class=likes ><ion-icon name=heart></ion-icon></a></div>")
 
                         $("#card" + [i]).append("<div id=desc-content" + [i] + "class=card-body>"
                         + "<p><strong>" + trackTitle + " </strong></p>"
@@ -74,46 +75,30 @@ $(document).ready(() => {
                         + " class=audio-player src="
                         + trackPlayer + "></audio></div>")
 
-                        // Init Local Storage for Like Buttons
-                        let likesJSON = localStorage.getItem("likes")
-                        let likesStorage = likesJSON ? JSON.parse(likesJSON) : likesJSON
-
-                        // Prepare item for localStorage
-                        $('#like' + [i]).addClass( !(likesStorage && likesStorage.find(item => item.id === playlist.trackID)) ? "likes-inactive" : "likes-active")
-
-                        
 
                         // User Interaction + localStorage
                         $("#card" + [i]).find("#like" + [i]).click( function(e) {
                             e.preventDefault()
 
-                            if($(this).hasClass("likes-inactive")) {
+                            if($(this).hasClass("likes")) {
                                 $(this).addClass("likes-active")
-                                $(this).removeClass("likes-inactive")
-                                console.log('Liked')
-                            
+                                $(this).removeClass("likes")
 
                                 // https://stackoverflow.com/questions/26273043/cannot-read-property-push-of-null
-                                // let likedTracks = JSON.parse(localStorage.getItem("likes")) || []
-                                // likedTracks.push(playlist)
-                                // localStorage.setItem("likes", JSON.stringify(playlist))
-                                // console.log(likesStorage)
-                                
+                                let liked = JSON.parse(localStorage.getItem("like")) || []
+                                    liked.push(likedTrack)
+                                    localStorage.setItem("like", JSON.stringify(liked))
+
+                                console.log(`${tracks.data[i].title} has been Liked`)
+                                console.log(likedTrack)
+
                             } else {
                                 $(this).removeClass("likes-active")
-                                $(this).addClass("likes-inactive")
-                                console.log('Disliked')
-                                
-                                
-                                // let likedTracks = JSON.parse(localStorage.getItem("likes"))
-                                // likedTracks = likedTracks.filter(likedTracks => {
-                                //     if (likedTracks.trackID == playlist.trackID) {
-                                //         return false
-                                //     }
-                                //     return true
-                                // })
-                                // localStorage.setItem("likes", JSON.stringify(likedTracks))
+                                $(this).addClass("likes")
 
+                                localStorage.removeItem("like")
+                                console.log(`${tracks.data[i].title} has been Disliked`)
+                                console.log(likedTrack)
                             }
 
                         })
@@ -129,3 +114,4 @@ $(document).ready(() => {
         })
     })
 })
+

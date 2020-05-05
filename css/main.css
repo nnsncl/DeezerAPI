@@ -100,12 +100,14 @@ button {
     box-shadow: none;
 }
 
-.likes-inactive{
-    color: grey;
+.likes{
     transition: .2s ease-in-out;
 }
 .likes-active{
     color: #F28A70;
+    transition: .2s ease-in-out;
+}
+.likes-inactive{
     transition: .2s ease-in-out;
 }
 
