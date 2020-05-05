@@ -108,7 +108,7 @@ $(document).ready(function(){
 
             // Render this if the field is empty or if no datas match
             else {
-                $("#cards-stack").html("Aucun resultat")
+                $(".cards-stack").html("<h6>Aucun resultat correspondant à votre recherche</h6>")
             }
         
         })
