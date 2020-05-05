@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
 
     let liked = JSON.parse(localStorage.getItem("like")) || []
 
@@ -7,7 +7,7 @@ $(document).ready(function() {
         for (let i = 0; i < liked.length; i++) {
         
             // Cards builder
-            $("#playlist-stack").append("<div id=card" + [i] + " class=card></div>");
+            $("#playlist-stack").append("<div id=card" + [i] + " class=card></div>")
             $("#card" + [i]).append("<div id=card-header" + [i] + " class=card-header>"
             + "<img src=" + liked[i].trackCover + " class=cover>"
             + "<a id=like" + [i]
