@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeezWeb - Listen music</title>
     <link rel="stylesheet" href="css/main.css">
-    <!-- icons -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+   
 </head>
-<body>
+<body data-barba="wrapper">
+    <div class="loading-container">
+        <div class="loading-screen">
+        </div>
+      </div>
     <header>
-        <nav>
+        <nav class="main-navigation">
             <div class="logo-container">
                 <a href="index.html"><img src="img/id.svg"></a>
             </div>
@@ -23,29 +26,39 @@
             </div>
         </nav>
     </header>
+    <section class="container">
+        <div class="centered-container is-animated">
+            <h1 class="is-animated">Choisissez ce que vous écoutez. Listez vos favoris.</h1>
+            <p class="is-animated mb-30">Avec des millions de <strong>titres</strong>, des <strong>podcasts</strong>, des <strong>radios et plus encore</strong>, chacun peut trouver son bonheur.</p>
+            <a href="search.html" class="button-primary">Commencez à écouter</a>
+        </div>
+        <div class="is-animated-slow fullwidth-container">
+            <img src="img/artists-on-app.png">
+        </div>
+    </section>
   
-  <section class="container">
+    <section class="container">
       <div class="centered-container">
-          <h1>Choisissez ce que vous écoutez. Listez vos favoris.</h1>
-          <p>Avec des millions de <strong>titres</strong>, des <strong>podcasts</strong>, des <strong>radios et plus encore</strong>, chacun peut trouver son bonheur.</p>
-          <a href="search.html" class="button-primary">Commencez à écouter</a>
-      </div>
-      <div class="fullwidth-container">
-          <img src="img/artists-on-app.png">
+          <h1>Vos chansons préférées à portée de main.</h1>
+          <p class="mb-30">Retrouvez des voix familières dans vos favoris et découvrez-en de nouvelles via la recherche.</p>
+          <div class="card-stack"></div>
       </div>
   </section>
 
-  <section class="container">
-    <div class="centered-container">
-        <h1>Vos chansons préférées à portée de main.</h1>
-        <p>Retrouvez des voix familières dans vos favoris et découvrez-en de nouvelles via la recherche.</p>
-        <div class="card-stack"></div>
-    </div>
-</section>
 
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<script  src="http://code.jquery.com/jquery-3.2.1.js"></script>
-<script  src="js/likes.js"></script>
-<script  src="js/index.js"></script>
+  <!-- GSAP for animation -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+  <!-- icons -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+ 
+
+  <!-- App JS file -->
+  <script  src="js/animate.js"></script>
+  <script  src="js/likes.js"></script>
+  <script  src="js/index.js"></script>
 </body>
 </html>

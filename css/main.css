@@ -86,7 +86,6 @@ button {
     color: #fafafa;
     cursor: pointer;
     padding: 15px 20px;
-    margin: 30px 0;
     border-radius: 50px;
     border: none;
     font-size: 1rem;
@@ -208,6 +207,10 @@ nav{
    width: 100%;
 }
 
+/* Spacing */
+.mb-30{
+    margin-bottom: 30px;
+}
 /* Cards */
 .cards-stack{
     display:flex;

@@ -6,9 +6,13 @@
     <title>DeezWeb - Listen music</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body data-barba="wrapper">
+    <div class="loading-container">
+        <div class="loading-screen">
+        </div>
+      </div>
     <header>
-        <nav>
+        <nav class="main-navigation">
             <div class="logo-container">
                 <a href="index.html"><img src="img/id.svg"></a>
             </div>
@@ -21,20 +25,27 @@
             </div>
         </nav>
     </header>
-  
     <section class="container">
-        <div class="left-container">
-            <h2>Liste de favoris.</h2>
-            <p>Votre playlist, basée sur vos likes.</p>
+        <div class="left-container is-animated">
+            <h2 class="is-animated">Liste de favoris.</h2>
+            <p class="is-animated">Votre playlist, basée sur vos likes.</p>
         </div>
     </section>
 
-    <section class="cards-stack" id="playlist-stack"></section>
+    <section class="is-animated cards-stack" id="playlist-stack"></section>
 
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script  src="http://code.jquery.com/jquery-3.2.1.js"></script>
-    <script  src="js/likes.js"></script>
-    <script  src="js/playlist.js"></script>
+  <!-- GSAP for animation -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+   <!-- icons -->
+   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+  <!-- App JS file -->
+  <script  src="js/animate.js"></script>
+  <script  src="js/likes.js"></script>
+  <script  src="js/playlist.js"></script>
 </body>
 </html>

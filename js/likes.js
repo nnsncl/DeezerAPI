@@ -75,7 +75,7 @@ $(document).ready( () => {
                         + " class=audio-player src="
                         + trackPlayer + "></audio></div>")
                         
-                        // User Interaction + localStorage
+                        // User Interaction + localStorage (Need reviews)
                         $("#card" + [i]).find("#like" + [i]).click( function(e) {
                             e.preventDefault()
 

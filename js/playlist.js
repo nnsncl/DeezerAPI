@@ -6,7 +6,7 @@ $(document).ready(() => {
         
         for (let i = 0; i < liked.length; i++) {
         
-            // Cards builder
+            // Cards builder (Need reviews : Add delete from playlist)
             $("#playlist-stack").append("<div id=card" + [i] + " class=card></div>")
             $("#card" + [i]).append("<div id=card-header" + [i] + " class=card-header>"
             + "<img src=" + liked[i].trackCover + " class=cover>"
@@ -26,7 +26,7 @@ $(document).ready(() => {
     
     } else {
         $(".cards-stack").html(
-              "<div><p>Vous n'avez pas enregistrer de musique dans votre playlist.</p>"
+              "<div><p class=mb-30>Vous n'avez pas enregistrer de musique dans votre playlist.</p>"
             + "<a href='search.html' class='button-primary'>Creer une playlist</a></div>"
             )
     }
