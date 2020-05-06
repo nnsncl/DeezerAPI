@@ -3,7 +3,7 @@ $(document).ready(() => {
     let storedLikes = localStorage.getItem("like")
     let liked = storedLikes ? JSON.parse(storedLikes) : storedLikes
 
-    if(liked && liked.length > 0) {
+    if (liked && liked.length > 0) {
 
         // Generate random number based on the number of tracks liked
         const randomLikeDOM = Math.floor(Math.random() * liked.length)
@@ -12,7 +12,7 @@ $(document).ready(() => {
 
         // Cards builder
         $(".cards-stack").append(
-        `<div id="card${randomLikeDOM}" class="card-centered">
+            `<div id="card${randomLikeDOM}" class="card-centered">
             <div id="card-header${randomLikeDOM}" class="card-header">
             <img src="${liked.trackCover}" class="cover">
         </div>
@@ -25,7 +25,7 @@ $(document).ready(() => {
         </div>`)
 
         // Render new random like
-        $("#reload").on('click',()=> {
+        $("#reload").on('click', () => {
             location.reload()
         })
 

@@ -7,7 +7,7 @@ $(document).ready( () => {
         const filters = $('#filter-input').find('option:selected')
         let filteredOption = filters.val()
 
-        // Define how to filter datas
+        // Define how to filter datas (Must refactor)
         switch (filteredOption) {
             case 'song':
                 filteredOption = 'TRACK_ASC'
@@ -77,10 +77,7 @@ $(document).ready( () => {
                         <audio controls="" id="audio-player${i}" class="audio-player" src="${trackPlayer}"></audio>
                     </div>`)
 
-                        let storedLikes = localStorage.getItem("like")
-                        let liked = storedLikes ? JSON.parse(storedLikes) : storedLikes
-
-                        // User Interaction + localStorage (Need reviews)
+                        // User Interaction + localStorage (Must refactor)
                         $("#card" + [i]).find("#like" + [i]).click( function(e) {
                             e.preventDefault()
 
@@ -103,7 +100,7 @@ $(document).ready( () => {
                                 // https://stackoverflow.com/questions/39554364/return-true-or-false-from-a-function
                                 let storedLikes = localStorage.getItem("like")
                                 storedLikes = JSON.parse(storedLikes)
-                                console.log(likedTrack)
+
                                 storedLikes = storedLikes.filter(storedLikes => 
                                     storedLikes.trackID != likedTrack.trackID
                                 )
@@ -115,7 +112,6 @@ $(document).ready( () => {
                         })
                 } 
             } 
-
             // Render this if the field is empty or if no datas match
             else {
                 $(".cards-stack").html("<h6>Aucun resultat correspondant à votre recherche</h6>")
