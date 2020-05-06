@@ -7,33 +7,11 @@ $(document).ready( () => {
         const filters = $('#filter-input').find('option:selected')
         let filteredOption = filters.val()
 
-        // Define how to filter datas (Must refactor)
-        switch (filteredOption) {
-            case 'song':
-                filteredOption = 'TRACK_ASC'
-                break;
-            case 'artist':
-                filteredOption = 'ARTIST_ASC'
-                break;
-            case 'album':
-                filteredOption = 'ALBUM_ASC'
-                break;
-            case 'rating':
-                    filteredOption = 'RATING_ASC'
-                    break;
-            case 'rank':
-                filteredOption = 'RANKING'
-                break;
-            default:
-                filteredOption = 'TRACK_ASC'
-        }
-
         // Api Call
         $.ajax({
             url : "https://api.deezer.com/search?q=" + userInput + "&order=" + filteredOption +"&output=jsonp",
             dataType : 'jsonp'
-        }).done(function(tracks) {
-
+        }).done((tracks) => {
 
             // Check if userInput is filled and if it returns datas
             if(userInput.length != 0 && tracks.data.length != 0) {
@@ -78,7 +56,7 @@ $(document).ready( () => {
                     </div>`)
 
                         // User Interaction + localStorage (Must refactor)
-                        $("#card" + [i]).find("#like" + [i]).click( function(e) {
+                        $(`#card${i}`).find(`#like${i}`).click( function(e) {
                             e.preventDefault()
 
                             if($(this).hasClass("likes")) {
@@ -110,6 +88,7 @@ $(document).ready( () => {
                                 console.log(likedTrack)
                             }
                         })
+                        
                 } 
             } 
             // Render this if the field is empty or if no datas match
