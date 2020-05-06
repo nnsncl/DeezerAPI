@@ -75,6 +75,9 @@ $(document).ready( () => {
                         + " class=audio-player src="
                         + trackPlayer + "></audio></div>")
                         
+                        let storedLikes = localStorage.getItem("like")
+                        let liked = storedLikes ? JSON.parse(storedLikes) : storedLikes
+
                         // User Interaction + localStorage (Need reviews)
                         $("#card" + [i]).find("#like" + [i]).click( function(e) {
                             e.preventDefault()
@@ -94,12 +97,20 @@ $(document).ready( () => {
                             } else {
                                 $(this).removeClass("likes-active")
                                 $(this).addClass("likes")
+                                // console.log("like" + [i])
 
-                                localStorage.removeItem("like")
+                                // https://stackoverflow.com/questions/39554364/return-true-or-false-from-a-function
+                                let storedLikes = localStorage.getItem("like")
+                                storedLikes = JSON.parse(storedLikes)
+                                console.log(likedTrack)
+                                storedLikes = storedLikes.filter(storedLikes => 
+                                    storedLikes.trackID != likedTrack.trackID
+                                )
+                                localStorage.setItem("like", JSON.stringify(storedLikes))
+                                
                                 console.log(`${tracks.data[i].title} has been Disliked`)
                                 console.log(likedTrack)
                             }
-
                         })
 
                 } 
