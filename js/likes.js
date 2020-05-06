@@ -60,7 +60,7 @@ $(document).ready( () => {
                     }
                     
                         // Cards builder
-                        $("#cards-stack").append("<div id=card" + [i] + " class=card></div>");
+                        $(".cards-stack").append("<div id=card" + [i] + " class=card></div>");
                         $("#card" + [i]).append("<div id=card-header" + [i] + " class=card-header>"
                         + "<img src=" + trackCover + " class=cover>"
                         + "<a id=like" + [i]

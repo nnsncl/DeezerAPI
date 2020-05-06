@@ -7,7 +7,7 @@ $(document).ready(() => {
         for (let i = 0; i < liked.length; i++) {
         
             // Cards builder (Need reviews : Add delete from playlist)
-            $("#playlist-stack").append("<div id=card" + [i] + " class=card></div>")
+            $(".cards-stack").append("<div id=card" + [i] + " class=card></div>")
             $("#card" + [i]).append("<div id=card-header" + [i] + " class=card-header>"
             + "<img src=" + liked[i].trackCover + " class=cover>"
             + "<a id=like" + [i]
