@@ -11,12 +11,12 @@ $(document).ready(() => {
                 `<div id="card${i}" class="card">
                 <div id="card-header${i}" class="card-header">
                 <img src="${liked[i].trackCover}" class="cover">
-                <a id="like${i}" class="likes">
+                <a id="like${i}" class="likes-active">
                     <ion-icon name="heart" role="img" class="md hydrated" aria-label="heart"></ion-icon>
                 </a>
             </div>
             <div id="desc-content${i} class=card-body">
-                <h6>${liked[i].trackTitle}</h6>
+                <p class="text-emphasis">${liked[i].trackTitle}</p>
                 <p>${liked[i].trackArtist}</p>
                 <p>${liked[i].trackAlbum}</p>
             </div>

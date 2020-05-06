@@ -35,7 +35,7 @@ body {
 h1, h2, h3, h4, h5, h6{
     font-family: 'Questrial', sans-serif;
     line-height: 1.2;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 h1{
@@ -58,6 +58,10 @@ p{
     font-size: 1rem;
     line-height: 1.5;
     color: grey;
+}
+.text-emphasis{
+    color: #212121;
+    font-weight: bolder;
 }
 strong{
     color: #212121;
@@ -90,9 +94,9 @@ button {
     border: none;
     font-size: 1rem;
     text-decoration: none;
-    -webkit-box-shadow: 0px 10px 10px -5px rgba(242,138,112,.6);
-    -moz-box-shadow: 0px 10px 10px -5px rgba(242,138,112,.6);
-    box-shadow: 0px 10px 10px -5px rgba(242,138,112,.6);
+    -webkit-box-shadow: 0px 10px 10px -5px rgba(242,138,112,.3);
+    -moz-box-shadow: 0px 10px 10px -5px rgba(242,138,112,.3);
+    box-shadow: 0px 10px 10px -5px rgba(242,138,112,.3);
     transition: .2s ease-in-out;
 }
 .button-primary:hover{
@@ -100,14 +104,16 @@ button {
 }
 
 .likes{
-    transition: .2s ease-in-out;
-}
-.likes-active{
     color: #F28A70;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.likes-active{
+    color: red ;
+    transition: .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .likes-inactive{
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 /* Form */
@@ -175,12 +181,9 @@ nav{
 }
 
 .nav-links:hover{
-    color: #212121;
-}
-
-#favorites:hover{
     color: #F28A70;
 }
+
 
 /* 3 - Layout */
 
@@ -200,6 +203,8 @@ nav{
     margin: 100px 0;
 }
 
+
+
 .fullwidth-container {
     grid-column: 1 / span 6;
 }
@@ -216,7 +221,7 @@ nav{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .card-centered {
     display:block;
@@ -225,13 +230,7 @@ nav{
     margin: 30px auto;
     padding: 15px 15px;
 }
-.card-centered .cover {
-   width: 100%;
-   /* -webkit-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.6);
-   -moz-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.6); */
-   box-shadow: 0px 15px 15px -5px rgba(0, 0, 0, 0.3);
 
-}
 .card {
     display:flex;
     overflow: hidden;
@@ -247,17 +246,23 @@ nav{
     justify-content: space-between;
 }
 .cover{
-    border-radius: 8px;
-    width:100px;
-
+    border-radius: 4px;
+    width:150px;
+    -webkit-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 15px 15px -5px rgba(0, 0, 0, 0.3);
+    transition: .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
-
-
-.song-title{
-    font-weight:bold;
+.cover:hover{
+    box-shadow:none;
 }
+.card-centered .cover {
+    width: 200px;
+    margin: 0 auto;
+ }
 
 .audio-player{
+    background-color: #F1F3F4;
     width:100%;
     margin: 10px auto;
 }

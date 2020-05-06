@@ -48,7 +48,7 @@ $(document).ready( () => {
                             </a>
                         </div>
                         <div id="desc-content${i} class=card-body">
-                            <h6>${trackTitle}</h6>
+                            <p class="text-emphasis">${trackTitle}</p>
                             <p>${trackArtist}</p>
                             <p>${trackAlbum}</p>
                         </div>
