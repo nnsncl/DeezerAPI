@@ -11,16 +11,19 @@ $(document).ready(() => {
 
 
         // Cards builder
-        $(".card-stack").append("<div id=card" + randomLikeDOM + " class=card-centered></div>")
-        $("#card" + randomLikeDOM).append("<div id=card-header" + randomLikeDOM + " class=card-header>"
-        + "<img src=" + liked.trackCover + " class=cover>")
+        $(".cards-stack").append(
+        `<div id="card${randomLikeDOM}" class="card-centered">
+            <div id="card-header${randomLikeDOM}" class="card-header">
+            <img src="${liked.trackCover}" class="cover">
+        </div>
+        <div id="desc-content${randomLikeDOM} class=card-body">
+            <h6>${liked.trackTitle}</h6>
+            <p>${liked.trackArtist}</p>
+            <p class="mb-30">${liked.trackAlbum}</p>
+        </div>
+        <a id=reload class=button-primary><ion-icon name='refresh'></ion-icon></a>
+        </div>`)
 
-        $("#card" + randomLikeDOM).append("<div id=desc-content" + randomLikeDOM + "class=card-body>"
-        + "<p><strong>" + liked.trackTitle + " </strong></p>"
-        + "<p>" + liked.trackArtist + "</p>"
-        + "<p class=mb-30>" + liked.trackAlbum  + "</p>"
-        + "<a id=reload class=button-primary><ion-icon name='refresh'></ion-icon></a></div>")
-         
         // Render new random like
         $("#reload").on('click',()=> {
             location.reload()

@@ -28,12 +28,13 @@ $(document).ready( () => {
                 filteredOption = 'TRACK_ASC'
         }
 
+        // Api Call
         $.ajax({
             url : "https://api.deezer.com/search?q=" + userInput + "&order=" + filteredOption +"&output=jsonp",
             dataType : 'jsonp'
         }).done(function(tracks) {
 
-            
+
             // Check if userInput is filled and if it returns datas
             if(userInput.length != 0 && tracks.data.length != 0) {
 
@@ -60,21 +61,22 @@ $(document).ready( () => {
                     }
                     
                         // Cards builder
-                        $(".cards-stack").append("<div id=card" + [i] + " class=card></div>");
-                        $("#card" + [i]).append("<div id=card-header" + [i] + " class=card-header>"
-                        + "<img src=" + trackCover + " class=cover>"
-                        + "<a id=like" + [i]
-                        + " class=likes ><ion-icon name=heart></ion-icon></a></div>")
+                        $(".cards-stack").append(
+                            `<div id="card${i}" class="card">
+                            <div id="card-header${i}" class="card-header">
+                            <img src="${trackCover}" class="cover">
+                            <a id="like${i}" class="likes">
+                                <ion-icon name="heart" role="img" class="md hydrated" aria-label="heart"></ion-icon>
+                            </a>
+                        </div>
+                        <div id="desc-content${i} class=card-body">
+                            <h6>${trackTitle}</h6>
+                            <p>${trackArtist}</p>
+                            <p>${trackAlbum}</p>
+                        </div>
+                        <audio controls="" id="audio-player${i}" class="audio-player" src="${trackPlayer}"></audio>
+                    </div>`)
 
-                        $("#card" + [i]).append("<div id=desc-content" + [i] + "class=card-body>"
-                        + "<p><strong>" + trackTitle + " </strong></p>"
-                        + "<p>" + trackArtist + "</p>"
-                        + "<p>" + trackAlbum + "</p></div>")
-                        
-                        $("#card"+[i]).append("<audio controls id=audio-player" + [i]
-                        + " class=audio-player src="
-                        + trackPlayer + "></audio></div>")
-                        
                         let storedLikes = localStorage.getItem("like")
                         let liked = storedLikes ? JSON.parse(storedLikes) : storedLikes
 
@@ -97,7 +99,6 @@ $(document).ready( () => {
                             } else {
                                 $(this).removeClass("likes-active")
                                 $(this).addClass("likes")
-                                // console.log("like" + [i])
 
                                 // https://stackoverflow.com/questions/39554364/return-true-or-false-from-a-function
                                 let storedLikes = localStorage.getItem("like")
@@ -112,7 +113,6 @@ $(document).ready( () => {
                                 console.log(likedTrack)
                             }
                         })
-
                 } 
             } 
 
@@ -124,4 +124,3 @@ $(document).ready( () => {
         })
     })
 })
-
