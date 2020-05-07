@@ -1,10 +1,9 @@
 $(document).ready(() => {
 
-    let storedLikes = localStorage.getItem("like")
-    let liked = storedLikes ? JSON.parse(storedLikes) : storedLikes
+    const storedLikes = localStorage.getItem("like")
 
-    if (liked && liked.length > 0) {
-
+    const generateRandomLikeDOM = () => {
+        let liked = storedLikes ? JSON.parse(storedLikes) : storedLikes
         // Generate random number based on the number of tracks liked
         const randomLikeDOM = Math.floor(Math.random() * liked.length)
         liked = liked[randomLikeDOM]
@@ -22,13 +21,15 @@ $(document).ready(() => {
         </div>
         <a id=reload class=button-primary><ion-icon name='refresh'></ion-icon></a>
         </div>`)
-
-        // Render new random like
-        $("#reload").on('click', () => {
-            location.reload()
-        })
-
-    } else {
-        $(".cards-stack").html("<a href='search.html' class='button-primary'>Creer une playlist</a>")
     }
+
+    const generateCTA = () => {
+        $(".cards-stack").html("<a href='search.html' class='button button-primary'>Creer une playlist</a>")
+    }
+
+
+    storedLikes && storedLikes.length > 0 ? generateRandomLikeDOM() : generateCTA()
+    $("#reload").on('click', () => { location.reload() })
+    
+
 })
