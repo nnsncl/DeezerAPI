@@ -86,7 +86,7 @@ button {
 
 .button-primary {
     display: inline-block;
-    background-color: #F28A70;
+    background-color: #D20A12;
     color: #fafafa;
     cursor: pointer;
     padding: 15px 20px;
@@ -104,7 +104,7 @@ button {
 }
 
 .likes{
-    color: #F28A70;
+    color: #D20A12;
     transition: .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
@@ -161,6 +161,10 @@ nav{
     align-items: center;
     border-bottom: 3px solid #fafafa;
 }
+.nav-id {
+    max-height: 20px;
+    height: 20px;
+}
 
 .nav-modules{
     width: 50%;
@@ -181,7 +185,7 @@ nav{
 }
 
 .nav-links:hover{
-    color: #F28A70;
+    color: #D20A12;
 }
 
 
