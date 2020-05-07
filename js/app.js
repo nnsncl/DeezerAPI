@@ -86,15 +86,15 @@ $(document).ready(() => {
                             }
 
                             const removeLike = () => {
-                                
+
                                 let storedLikes = localStorage.getItem("like")
                                 storedLikes = JSON.parse(storedLikes)
 
-                                 // Filter every trackID's Objects properties
+                                // Filter every trackID's Objects properties
                                 storedLikes = storedLikes.filter(storedLikes =>
                                     storedLikes.trackID != likedTrack.trackID
                                 )
-                               
+
                                 // Remove the filtered Object from Local Storage
                                 localStorage.setItem("like", JSON.stringify(storedLikes))
 
@@ -110,7 +110,7 @@ $(document).ready(() => {
 
                         })
                     }
-                    
+
                     likeService()
 
                 }
