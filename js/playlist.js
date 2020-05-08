@@ -43,8 +43,8 @@ $(document).ready(() => {
         $(".centered-container").append(`
             <div class="flashbag-alert">
                 <ion-icon class="is-bouncing text-lg" name="alert-outline"></ion-icon>
-                <h3 class="color-black">Vous n'avez pas enregistré de musique dans votre playlist.</h3>
-                <p class="color-black mb-30 text-xs">Pour enregistrer vos musiques favoris dans votre playlist, cliquez sur le bouton ci-dessous.</p>
+                <h3 class="color-black">Vous n'avez pas enregistré de favoris dans votre playlist.</h3>
+                <p class="color-black mb-30 text-xs">Pour enregistrer des favoris dans votre playlist, cliquez sur le bouton ci-dessous.</p>
                 <a href='search.html' class='color-black button-line'>Ajouter des favoris</a>
             </div>
         `)
