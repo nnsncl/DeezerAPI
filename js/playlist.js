@@ -18,9 +18,9 @@ $(document).ready(() => {
                     </a>
                     </div>
                     <div id="desc-content${i} class=card-body">
-                        <p class="text-emphasis">${liked[i].trackTitle}</p>
+                        <p class="text-lg">${liked[i].trackTitle}</p>
                         <p>${liked[i].trackArtist}</p>
-                        <p>${liked[i].trackAlbum}</p>
+                        <p class="text-xs">${liked[i].trackAlbum}</p>
                     </div>
                     <audio controls="" id="audio-player${i}" class="audio-player" src="${liked[i].trackPlayer}"></audio>
                 </div>`)
@@ -42,9 +42,10 @@ $(document).ready(() => {
     const createPlaylistCTA = () => {
         $(".centered-container").append(`
             <div class="flashbag-alert">
-                <h3>Vous n'avez pas enregistré de musique dans votre playlist.</h3>
-                <p class="mb-30">Pour enregistrer vos musiques favoris dans votre playlist, cliquez sur le bouton ci-dessous.</p>
-                <a href='search.html' class='button-line'>Ajouter des favoris</a>
+                <ion-icon class="is-bouncing text-lg" name="alert-outline"></ion-icon>
+                <h3 class="color-black">Vous n'avez pas enregistré de musique dans votre playlist.</h3>
+                <p class="color-black mb-30 text-xs">Pour enregistrer vos musiques favoris dans votre playlist, cliquez sur le bouton ci-dessous.</p>
+                <a href='search.html' class='color-black button-line'>Ajouter des favoris</a>
             </div>
         `)
     }

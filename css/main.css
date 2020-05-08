@@ -106,8 +106,14 @@ small {
 }
 p {
 	font-size: var(--text-md);
-	line-height: var(--line-xl);
 	color: var(--color-white)
+}
+.text-xs {
+    font-size: var(--text-sm);
+}
+.text-lg {
+    font-size: var(--text-lg);
+    margin-bottom: 15px;
 }
 a {
     cursor: pointer;
@@ -325,9 +331,12 @@ nav{
 }
 
 .flashbag-alert {
-    background-color: var(--color-red);
+    background-color: var(--color-white);
     padding: 1.5rem;
     border-radius: .33rem;
+}
+.color-black{
+    color:var(--color-black)
 }
 
 @media (max-width: 768px){

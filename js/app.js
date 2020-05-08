@@ -52,9 +52,9 @@ $(document).ready(() => {
                                 </a>
                             </div>
                             <div id="desc-content${i} class=card-body">
-                                <p class="text-emphasis">${trackTitle}</p>
+                                <p class="text-lg">${trackTitle}</p>
                                 <p>${trackArtist}</p>
-                                <p>${trackAlbum}</p>
+                                <p class="text-xs">${trackAlbum}</p>
                             </div>
                             <audio controls="" id="audio-player${i}" class="audio-player" src="${trackPlayer}"></audio>
                             </div>`)

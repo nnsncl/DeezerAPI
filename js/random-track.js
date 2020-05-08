@@ -20,9 +20,9 @@ $(document).ready(() => {
                 </div>
             </div>
             <div id="desc-content${randomLikeDOM} class=card-body">
-                <p class="text-emphasis">${liked.trackTitle}</p>
+                <p class="text-lg">${liked.trackTitle}</p>
                 <p>${liked.trackArtist}</p>
-                <p class="mb-30">${liked.trackAlbum}</p>
+                <p class="mb-30 text-xs">${liked.trackAlbum}</p>
             </div>
             </div>
             `)
