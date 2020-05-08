@@ -30,6 +30,7 @@ const contentAnimation = () => {
     ease: Power2.easeInOut})
 
 }
+
 contentAnimation()
 
 $(document).mousemove( (e) => {
@@ -40,7 +41,7 @@ $(document).mousemove( (e) => {
   TweenLite.to($('.perspective'), 0.2, {
     rotationY:10*x,
     rotationX:5*y,
-    ease:Power1.easeOut,
+    ease:Power2.easeOut,
     transformPerspective:500,
     transformOrigin:"center"
   })
