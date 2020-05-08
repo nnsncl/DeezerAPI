@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeezWeb - Listen music</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Lancez l'application depuis un navigateur moderne pour supporter les CSS Variables.");</script>
 </head>
 <body>
     <header>
@@ -15,21 +17,19 @@
             <div class="nav-modules is-animated">
                 <ul>
                     <li><a class="nav-links" href="index.html"><ion-icon name="arrow-back-outline"></ion-icon></a></li>
-                    <li><a class="nav-links" href="playlist.html"><ion-icon name="heart-outline"></ion-icon></a></li>
-                    <li><a class="nav-links" href="search.html"><ion-icon name="radio-outline"></ion-icon></a></li>
+                    <li><a class="nav-links" href="playlist.html"><ion-icon class="is-bouncing" name="heart"></ion-icon></a></li>
+                    <li><a class="nav-links" href="search.html"><ion-icon name="search-outline"></ion-icon></a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <section class="container">
-        <div class="left-container is-animated">
-            <h2 class="is-animated">Liste de favoris.</h2>
-            <p class="is-animated">Votre playlist, basée sur vos likes.</p>
+        <div class="centered-container is-animated">
+            <h1 class="display-large is-animated">Liste de favoris.</h1>
+            <p class="is-animated mb-100">Votre playlist, basée sur vos likes.</p>
+            <div class="cards-stack" id="cards-stack"></div>
         </div>
     </section>
-
-    <section class="is-animated cards-stack"></section>
-
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 

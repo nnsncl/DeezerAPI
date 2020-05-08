@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="118px" height="30px" viewBox="0 0 118 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Group</title>
+<svg width="122px" height="30px" viewBox="0 0 122 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>id</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-539.000000, -465.000000)">
-            <g id="Group" transform="translate(539.000000, 465.000000)">
-                <text id="deezweb." font-family="Prompt-Medium, Prompt" font-size="20" font-weight="400" letter-spacing="-0.555555556" fill="#212121">
-                    <tspan x="30" y="22">deezweb.</tspan>
+        <g id="id">
+            <g id="deezweb." transform="translate(30.000000, 0.000000)" fill="#FFFFFF" font-family="Prompt-Regular, Prompt" font-size="20" font-weight="normal">
+                <text>
+                    <tspan x="0" y="22">deezweb.</tspan>
                 </text>
-                <g id="Icon" transform="translate(0.000000, 6.000000)">
-                    <polygon id="Path" fill="#212121" points="5.28874388 3 4 9.41406214 7.47296667 16 9 13.5609437 7.47296667 9.41406214 7.47296667 3"></polygon>
-                    <polygon id="Path-Copy" fill="#212121" points="1.28874388 10 0 13.9471152 3.47296667 18 5 16.4990423 3.47296667 13.9471152 3.47296667 10"></polygon>
-                    <polygon id="Path-Copy" fill="#D20A12" transform="translate(17.000000, 7.000000) rotate(90.000000) translate(-17.000000, -7.000000) " points="14.500179 4 14 7.71885775 17.9642559 10 20 8.73167241 16.5382229 6.61050932 16.757642 4.05626169"></polygon>
-                    <polygon id="Path-2" fill="#212121" points="12.058941 0 9 1.91327964 9 8.96802482 12.058941 15 14 12.0057476 12.058941 7.74120331"></polygon>
-                </g>
+            </g>
+            <g id="Icon" transform="translate(0.000000, 6.000000)" fill-rule="nonzero">
+                <polygon id="Path" fill="#FFFFFF" points="5.28874388 3 4 9.41406214 7.47296667 16 9 13.5609437 7.47296667 9.41406214 7.47296667 3"></polygon>
+                <polygon id="Path-Copy" fill="#FFFFFF" points="1.28874388 10 0 13.9471152 3.47296667 18 5 16.4990423 3.47296667 13.9471152 3.47296667 10"></polygon>
+                <polygon id="Path-Copy" fill="#D20A12" transform="translate(17.000000, 7.000000) rotate(90.000000) translate(-17.000000, -7.000000) " points="14.500179 4 14 7.71885775 17.9642559 10 20 8.73167241 16.5382229 6.61050932 16.757642 4.05626169"></polygon>
+                <polygon id="Path-2" fill="#FFFFFF" points="12.058941 0 9 1.91327964 9 8.96802482 12.058941 15 14 12.0057476 12.058941 7.74120331"></polygon>
             </g>
         </g>
     </g>
