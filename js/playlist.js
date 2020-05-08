@@ -40,11 +40,13 @@ $(document).ready(() => {
     }
 
     const createPlaylistCTA = () => {
-        $(".cards-stack").html(`
-            <div>
-                <p class=mb-30>Vous n'avez pas enregistré de musique dans votre playlist.</p>
-                <a href='search.html' class='button-primary'>Creer une playlist</a>
-            </div>`)
+        $(".centered-container").append(`
+            <div class="flashbag-alert">
+                <h3>Vous n'avez pas enregistré de musique dans votre playlist.</h3>
+                <p class="mb-30">Pour enregistrer vos musiques favoris dans votre playlist, cliquez sur le bouton ci-dessous.</p>
+                <a href='search.html' class='button-line'>Ajouter des favoris</a>
+            </div>
+        `)
     }
 
     liked.length != 0 ? generatePlaylistDOM() : createPlaylistCTA()

@@ -1,60 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeezWeb - Listen music</title>
     <link rel="stylesheet" href="css/main.css">
-   
+    <link rel="shortcut icon" href="favicon.ico">
+    <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Lancez l'application depuis un navigateur moderne pour supporter les CSS Variables.");</script>
 </head>
+
 <body>
-    <header>
-        <nav class="main-navigation">
-            <div class="logo-container">
-                <a href="index.html"><img src="img/id.svg"></a>
+    <main>
+        <header>
+            <nav class="main-navigation">
+                <div class="logo-container">
+                    <a href="index.html"><img src="img/id.svg"></a>
+                </div>
+                <div class="nav-modules is-animated">
+                    <ul>
+                        <li><a class="nav-links" href="playlist.html">
+                                <ion-icon class="is-bouncing" name="heart"></ion-icon>
+                            </a></li>
+                        <li><a class="nav-links" href="search.html">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <section class="container">
+            <div class="centered-container my-100">
+                <h1 class="is-animated display-large mb-30">De la musique,<br>pour tous.</h1>
+                <p class="is-animated mb-30">Recherchez parms des millions de titres, podcasts, radios et plus encore.
+                </p>
+                <a href="search.html" class="button-line is-animated">Commencez à écouter</a>
             </div>
-            <div class="nav-modules is-animated">
-                <ul>
-                    <li><a class="nav-links" href="playlist.html"><ion-icon name="heart-outline"></ion-icon></a></li>
-                    <li><a class="nav-links" href="search.html"><ion-icon name="radio-outline"></ion-icon></a></li>
-                </ul>
+            <div class="is-animated-from-right content-container-wide h-75"
+                style="background-image:url(img/5e2ffd718353babf865f82ca_dam.png); background-position:center;">
+
             </div>
-        </nav>
-    </header>
+        </section>
 
-    <section class="container">
-        <div class="centered-container is-animated">
-            <h1 class="is-animated">Choisissez ce que vous écoutez. Listez vos favoris.</h1>
-            <p class="is-animated mb-30">Avec des millions de <strong>titres</strong>, des <strong>podcasts</strong>, des <strong>radios et plus encore</strong>.</p>
-            <a href="search.html" class="button-primary">Commencez à écouter</a>
-        </div>
-        <div class="is-animated-slow fullwidth-container">
-            <img src="img/artists-on-app.png">
-        </div>
-    </section>
-  
-    <section class="container">
-      <div class="centered-container is-animated">
-          <h1 class="is-animated">Vos chansons préférées à portée de main.</h1>
-          <p class="is-animated mb-30">Retrouvez des voix familières dans vos favoris et découvrez-en de nouvelles via la recherche.</p>
-          <div class="is-animated cards-stack"></div>
-      </div>
-  </section>
+        <section class="container">
+            <div class="centered-container is-animated">
+                <h2 class="display-large mb-30 is-animated">Vos chansons préférées à portée de main.</h2>
+                <p class="is-animated mb-30">Retrouvez des voix familières dans vos favoris et découvrez-en de nouvelles
+                    via la recherche.</p>
+                <div class="cards-stack"></div>
+            </div>
+        </section>
+    </main>
 
 
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-  <!-- GSAP for animation -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-  <!-- icons -->
-  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
- 
+    <!-- GSAP for animation -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
-  <!-- App JS file -->
-  <script  src="js/animate.js"></script>
-  <script  src="js/app.js"></script>
-  <script  src="js/random-track.js"></script>
+    <!-- icons -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+
+    <!-- App JS file -->
+    <script src="js/animate.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/random-track.js"></script>
 </body>
+
 </html>
