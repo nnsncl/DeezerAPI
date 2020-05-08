@@ -13,7 +13,7 @@ $(document).ready(() => {
 
         // Api Call, it includes the value of the user input (search?q=) and the value of the option selected (&order=jsonp) before the submit.
         $.ajax({
-            url: "https://api.deezer.com/search?q=" + userInput + "&order=" + filteredOption + "&output=jsonp",
+            url: `https://api.deezer.com/search?q=${userInput}&order=${filteredOption}&output=jsonp`,
             dataType: 'jsonp'
         }).done((tracks) => {
 
