@@ -20,6 +20,8 @@ $(document).ready(() => {
             const renderSearchDOM = () => {
                 // Refresh cards-stack on new search
                 $("#cards-stack").empty()
+
+                
                 // Prepare an index for each datas we fetch, like so, we're able to manipulate (filter, find,...) each elements easily.
                 for (let i = 1; i < tracks.data.length; i++) {
 
@@ -29,7 +31,7 @@ $(document).ready(() => {
                     trackArtist = tracks.data[i].artist.name
                     trackAlbum = tracks.data[i].album.title
                     trackPlayer = tracks.data[i].preview
-
+                    console.log(tracks.next)
                     // Object for localStorage, an ID is added in order to interact with this object.
                     const likedTrack = {
                         trackID: tracks.data[i].id,
@@ -39,6 +41,7 @@ $(document).ready(() => {
                         trackAlbum: tracks.data[i].album.title,
                         trackPlayer: tracks.data[i].preview
                     }
+
 
                     const generateStack = () => {
                         // Cards builder using template string
@@ -117,7 +120,7 @@ $(document).ready(() => {
             }
 
             const noTracksFound = () => {
-                $(".cards-stack").html("<h6>Aucun resultat correspondant à votre recherche</h6>")
+                $(".cards-stack").html(`<h6>Aucun resultat correspondant à ${userInput}</h6>`)
             }
 
             // If the user Input isn't empty and the API returns data, execture enderSearchDOM(), else, display the error message
