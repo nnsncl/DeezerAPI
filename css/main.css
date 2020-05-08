@@ -118,7 +118,8 @@ p {
 a {
     cursor: pointer;
 	font-size: var(--text-sm);
-	text-decoration: none;
+    text-decoration: none;
+    color: var(--color-white);
 }
 
 b, strong {
@@ -344,8 +345,9 @@ nav{
     padding: 1.5rem;
     border-radius: .33rem;
 }
-.color-black{
-    color:var(--color-black)
+
+.color-white{
+    color:var(--color-white)!important;
 }
 
 @media (max-width: 768px){
