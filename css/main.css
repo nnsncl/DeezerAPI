@@ -340,7 +340,7 @@ nav{
 }
 
 .flashbag-alert {
-    background-color: var(--color-white);
+    border:1px solid var(--color-white);
     padding: 1.5rem;
     border-radius: .33rem;
 }
